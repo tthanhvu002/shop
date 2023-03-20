@@ -62,3 +62,43 @@ table button:hover{
 }
 /* những tr chẵn sẽ có màu khác */
 .thongtinnhom tr:nth-of-type(even) {background-color: #f2f2f2;}
+
+@media screen and (max-width: 767.98px) {
+	.lienhe-info{
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+	.body-lienhe{
+		margin: 20px 10px;
+	}
+	.info-left{
+		width: 100%;
+	}
+	.info-right{
+		width: 100%;
+	}
+	.guithongtin{
+		width: 100%;
+		margin: 20px 0;
+	}
+	.guithongtin p{
+		font-size: 20px !important;
+			
+	}
+	table{
+		margin-right: 10px ;
+	}
+	td{
+		font-size: 12px;
+	}
+	.thongtinnhom{
+		width: 100%;
+	}
+	.thongtinnhom p{
+		font-size: 20px !important;
+	}
+	.thongtinnhom table{
+		width: 100%;
+	}
+}

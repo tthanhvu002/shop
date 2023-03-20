@@ -135,3 +135,10 @@
 .xoaHet:hover {
     background-color: rgb(224, 65, 65);
 }
+
+
+@media screen and (max-width: 767.98px) {
+    .listSanPham th{
+        font-size: 12px;
+    }
+}
