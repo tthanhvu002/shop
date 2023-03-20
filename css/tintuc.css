@@ -5,6 +5,7 @@
 	
 }
 .tintuc-info{
+
 	height: 170px;
 	border-bottom: 1px solid #FCF;
 	margin-top: 5px;
@@ -26,4 +27,25 @@
 	font-weight: 100;
 	font-style: italic;
 	color: gray;
+}
+
+
+@media screen and (max-width: 767.98px) {
+	.body-tintuc{
+		margin-left: 10px;
+	}
+	.tintuc-info a{
+		height: unset;
+		display: flex;
+		padding-left: 0;
+		margin-left: 0;	
+		
+	}
+	.tintuc-info a h2{
+		font-size: 16px;
+	}
+	.tintuc-info img{
+		width: 100px ;
+		height: 100px;
+	}
 }

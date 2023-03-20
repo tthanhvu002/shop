@@ -365,3 +365,16 @@
     margin: 5px 0;
     color: #333;
 }
+
+@media screen and (max-width: 767.98px) {
+    .rowdetail{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+    .picture, .price_sale, .info_product{
+        width: 100%;
+        padding: 0 2%;
+    }
+}
