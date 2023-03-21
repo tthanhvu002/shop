@@ -7,7 +7,7 @@
 
 body,
 html {
-
+    min-width: unset;
 }
 
 a {
@@ -222,5 +222,12 @@ hr {
         -webkit-transform: scale(3);
         transform: scale(3);
         opacity: 0
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .admin-wrap{
+        display: flex;
+        flex-direction: column;
     }
 }

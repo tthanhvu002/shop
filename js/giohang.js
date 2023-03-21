@@ -120,6 +120,7 @@ function thanhToan() {
 		return;
 	}
 	if (window.confirm('Thanh toán giỏ hàng ?')) {
+		window.prompt("nhap sdt")
 		currentuser.donhang.push({
 			"sp": currentuser.products,
 			"ngaymua": new Date(),
