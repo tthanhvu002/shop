@@ -40,6 +40,7 @@ hr {
 
 .flexContain {
     display: -webkit-box;
+    gap: 7px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -92,6 +93,7 @@ hr {
     color: white;
     font-weight: bold;
     float: right;
+ 
     font-size: 22px;
     line-height: 20px;
     -webkit-transition: 0.3s;
