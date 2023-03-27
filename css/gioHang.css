@@ -142,3 +142,46 @@
         font-size: 12px;
     }
 }
+
+.customer-form{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    z-index: 999;
+    background-color: #e7e6e6;
+    padding: 10px;
+    border-radius: 8px;
+    top: -300px;
+
+}
+.customer-form.active{
+    top: 30px;
+    right: 30px;
+
+}
+.customer-form input{
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    padding: 7px;
+}
+.customer-form input[type="submit"]{
+    width: 30%;
+    cursor: pointer;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    padding: 7px;
+    border-radius: 8px;
+}
+
+
+@media screen and (max-width: 767.98px) {
+    .listSanPham td{
+        font-size: 11px;
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+}

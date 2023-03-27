@@ -566,8 +566,11 @@ function addTableDonHang() {
         var d = listDH[i];
         s += `<tr>
             <td style="width: 5%">` + (i+1) + `</td>
-            <td style="width: 13%">` + d.ma + `</td>
+            <td style="width: 7%">` + d.ma + `</td>
             <td style="width: 7%">` + d.khach + `</td>
+            <td style="width: 7%">` + d.diachi + `</td>
+            <td style="width: 7%">` + d.sdt + `</td>
+            
             <td style="width: 20%">` + d.sp + `</td>
             <td style="width: 15%">` + d.tongtien + `</td>
             <td style="width: 10%">` + d.ngaygio + `</td>
@@ -593,6 +596,8 @@ function addTableDonHang() {
 
 function getListDonHang(traVeDanhSachSanPham = false) {
     var u = getListUser();
+    let indexSp
+    console.log();
     var result = [];
     for(var i = 0; i < u.length; i++) {
         for(var j = 0; j < u[i].donhang.length; j++) {
@@ -621,9 +626,10 @@ function getListDonHang(traVeDanhSachSanPham = false) {
                     soLuong: s.soluong,
                 });
             }
-
             // Lưu vào result
             result.push({
+                "diachi": u[i].donhang[j].diachi,
+                "sdt": u[i].donhang[j].sdt,
                 "ma": u[i].donhang[j].ngaymua.toString(),
                 "khach": u[i].username,
                 "sp": traVeDanhSachSanPham ? danhSachSanPham : sps,
@@ -631,7 +637,7 @@ function getListDonHang(traVeDanhSachSanPham = false) {
                 "ngaygio": x,
                 "tinhTrang": u[i].donhang[j].tinhTrang
             });
-        }
+       }
     }
     return result;
 }
@@ -702,7 +708,7 @@ function timKiemDonHang(inp) {
 
         if (td.indexOf(text.toLowerCase()) < 0) {
             tr.style.display = 'none';
-        } else {
+
             tr.style.display = '';
         }
     }

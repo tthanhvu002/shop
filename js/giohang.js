@@ -1,5 +1,8 @@
 var currentuser; // user hiện tại, biến toàn cục
+let form = null
 window.onload = function () {
+	form = document.querySelector('.customer-form')
+	console.log(form);
     khoiTao();
 
 	// autocomplete cho khung tim kiem
@@ -108,6 +111,7 @@ function xoaSanPhamTrongGioHang(i) {
 }
 
 function thanhToan() {
+	const form = document.querySelector('.customer-form')
 	var c_user = getCurrentUser();
 	if(c_user.off) {
         alert('Tài khoản của bạn hiện đang bị khóa nên không thể mua hàng!');
@@ -120,15 +124,22 @@ function thanhToan() {
 		return;
 	}
 	if (window.confirm('Thanh toán giỏ hàng ?')) {
-		window.prompt("nhap sdt")
-		currentuser.donhang.push({
-			"sp": currentuser.products,
-			"ngaymua": new Date(),
-			"tinhTrang": 'Đang chờ xử lý'
-		});
-		currentuser.products = [];
-		capNhatMoiThu();
-		addAlertBox('Các sản phẩm đã được gửi vào đơn hàng và chờ xử lý.', '#17c671', '#fff', 4000);
+		form.classList.add('active')
+		form.querySelector('input[type="submit"]').onclick = (e) => {
+			e.stopPropagation()
+			alert("Thanh toan thanh cong")
+			form.classList.remove('active')
+			currentuser.donhang.push({
+				"sp": currentuser.products,
+				"ngaymua": new Date(),
+				"tinhTrang": 'Đang chờ xử lý',
+				"diachi": form.querySelector('#address').value,
+				"sdt": form.querySelector('#phone').value
+			});
+			currentuser.products = [];
+			capNhatMoiThu();
+			addAlertBox('Các sản phẩm đã được gửi vào đơn hàng và chờ xử lý.', '#17c671', '#fff', 4000);
+		}
 	}
 }
 
